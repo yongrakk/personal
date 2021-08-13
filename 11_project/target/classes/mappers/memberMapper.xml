@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="global.sesoc.test11.dao.MemberMapper">
+	<insert id="insertMember" parameterType="Member">
+	INSERT INTO c1member VALUES(
+	#{userid},#{userpwd},#{username},
+	#{useremail}
+	)
+	</insert>
+	<select id="selectOne" parameterType="map" resultType="Member">
+		SELECT * FROM c1member WHERE userid=#{userid} AND userpwd=#{userpwd}		
+	</select>
+</mapper>

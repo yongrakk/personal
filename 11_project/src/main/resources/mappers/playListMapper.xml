@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="global.sesoc.test11.dao.PlayListMapper">
+	<insert id="insertList" parameterType="PlayList">
+	INSERT INTO playlist(playlistnum,userid,playlisttitle,thumnail,videoid)
+	 VALUES(
+	playlist_seq.nextval,#{userid},#{playlisttitle},#{thumnail},#{videoid}
+	)
+	</insert>
+	
+	<select id="selectList" resultType="PlayList" parameterType="string">
+	SELECT * FROM playlist WHERE userid=#{userid} ORDER BY playlistnum desc
+	</select>
+	
+	<delete id="deleteList" parameterType="PlayList">
+	DELETE playlist WHERE userid=#{userid} AND playlistnum=#{playlistnum}
+	</delete>
+	
+</mapper>

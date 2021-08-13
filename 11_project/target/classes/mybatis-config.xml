@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+ <typeAliases>
+ 	<typeAlias type="global.sesoc.test11.dto.Member" alias="Member"/>
+ 	<typeAlias type="global.sesoc.test11.dto.Board" alias="Board"/>
+ 	<typeAlias type="global.sesoc.test11.dto.Reply" alias="Reply"/>
+ 	<typeAlias type="global.sesoc.test11.dto.PlayList" alias="PlayList"/>
+ 	<typeAlias type="global.sesoc.test11.dto.Comments" alias="Comments"/>
+ </typeAliases>
+  <mappers>
+  	<mapper resource="mappers/memberMapper.xml"/>
+  	<mapper resource="mappers/boardMapper.xml"/>
+  	<mapper resource="mappers/replyMapper.xml"/>
+  	<mapper resource="mappers/playListMapper.xml"/>
+  	<mapper resource="mappers/commentMapper.xml"/>
+  </mappers>
+</configuration>
